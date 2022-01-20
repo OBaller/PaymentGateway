@@ -14,7 +14,7 @@ struct ContentView: View {
     
     private func startCheckout(completion: @escaping (String?) -> Void) {
        
-        let url = URL(string: "https://mango-persistent-organ.glitch.me/create-payment-intent")!
+        let url = URL(string: "https://uneven-upbeat-slipper.glitch.me/create-payment-intent")!
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -61,9 +61,7 @@ struct ContentView: View {
                 } label: {
                     Button("Checkout") {
                         startCheckout { clientSecret in
-                            
                             PaymentConfig.shared.paymentIntentClientSecret = clientSecret
-                            
                             DispatchQueue.main.async {
                                 isActive = true
                             }
