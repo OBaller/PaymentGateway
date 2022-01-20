@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+     
     @EnvironmentObject private var cart: Cart
     @State private var isActive: Bool = false
     
